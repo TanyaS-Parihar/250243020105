@@ -1,0 +1,7 @@
+p_id,p_name,p_description,p_price,cat_id
+1,"Let us C","Best reference book for c language",200,1
+2,"Thinking in java","Rrfernce book for Java programing language.",500,1
+3,"Samsung mobile","Mobile phone.",5000,2
+4,"LG washing machine","Home applience of LG company",10000,2
+5,"Santoor face wash","Fame wash for all.",50,3
+6,"Lux soap","best quality soap.",30,3
