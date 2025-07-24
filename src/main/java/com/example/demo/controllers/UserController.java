@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,13 +19,14 @@ import com.example.demo.services.UserService;
 
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController // Marks this class as a REST controller to handle HTTP requests
+@RequestMapping("/user")
 public class UserController {
 
 	@Autowired
 	UserService userv; // Injects the UserService to handle business logic
 
 	// Fetch all users from the database
-	@GetMapping("/fetchusers")
+	@GetMapping("/all")
 	public List<User> FetchUserRecord() {
 		return userv.ViewUser();
 	}
@@ -48,7 +50,7 @@ public class UserController {
 	}
 
 	// Insert a new user into the database
-	@PostMapping("/insertuser")
+	@PostMapping("/save")
 	public User InsertUserRecord(@RequestBody User us) {
 		return userv.InsertUser(us);
 	}
