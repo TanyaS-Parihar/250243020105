@@ -70,7 +70,11 @@ public class UserController {
 	//Login 
 	@PostMapping("/loginuser")
 	public User InsertUserRecord(@RequestBody LoginRequest loginRequest) {
+		
+		 
 		return userv.LogInUser( loginRequest.getEmail(),loginRequest.getPassword());
+		
+		 
 	}
 	
 }

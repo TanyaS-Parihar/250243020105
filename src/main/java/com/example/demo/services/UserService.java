@@ -74,7 +74,11 @@ public class UserService {
 	
 	//Log-in
    public User LogInUser(String email,String password) {
-	   return urepo.LogIn( email, password);
+	   User user =urepo.LogIn( email, password);
+	   if (user == null) {
+	        throw new InvalidCredentialsException("Invalid email or password");
+	    }
+	    return user;
    }	
 	
 }
